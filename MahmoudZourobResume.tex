@@ -1,0 +1,185 @@
+
+
+%-------------------------
+% Resume in LaTeX
+% Author : Mahmoud Zourob (dot bullets + spacing + subheading alignment)
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% Packages
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\tabcolsep}{0in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Resume items
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+% ---- Subheading alignment fix ----
+% Left column: shifted left by 1em
+% Right column: shifted left by 0.5em (brings it closer to center)
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} -- #3 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{@{\hspace{-1em}}l@{\extracolsep{\fill}}r@{\hspace{-0.5em}}}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+% ---- List formatting ----
+
+% 1. EXPERIENCE LIST (Left margin 0in)
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% 2. PROJECT LIST (Left margin 0.15in)
+\newcommand{\resumeProjectListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeProjectListEnd}{\end{itemize}}
+
+% 3. EXPERIENCE BULLETS (Standard indent: 0in + 0.2in = 0.2in absolute)
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.4in, label=\textbullet, labelsep=1em]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% 4. PROJECT BULLETS (Reduced indent: 0.15in + 0.05in = 0.2in absolute)
+\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=0.25in, label=\textbullet, labelsep=1em]}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% ---- Global bullet style ----
+\setlist[itemize]{label=\textbullet, labelsep=0.6em}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape MAHMOUD ZOUROB} \\ \vspace{1pt}
+    \small (+1) 343-996-4771 $|$ 
+    \href{mailto:mahmoudzourob13@gmail.com}{\underline{email}} $|$ 
+    \href{www.linkedin.com/in/mahmoud-zourob-24401829b}{\underline{linkedin.com/mahmoud}} $|$ 
+    \href{https://github.com/mmdoo7123}{\underline{Github}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{University of Ottawa} & Ottawa, ON \\
+    \textit{Bachelor of Computer Engineering:} &  \textbf{Graduating April 2027} \\
+\end{tabular*}
+\textbf{Coursework:} Computer Architecture; Digital Systems ; Signal and System Analysis; Computer Systems Design; Principles and Applications of VLSI Design; Data Communications and Networking
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {EcoSafeSense}{Jan 26' -- Present}
+  {Solar Charge Controller Configuration Engineer}{}
+\resumeItemListStart
+  \resumeItem{Improved solar charging efficiency by \textbf{~30\%} using a \textbf{TI BQ25798} buck-boost charger with integrated \textbf{MPPT} and NVDC power-path control.}
+  \resumeItem{Configured charger operation via \textbf{I\textsuperscript{2}C register tuning} and validated performance using bench PSU testing and real-time V/I power measurements.}
+  \resumeItem{Built firmware-ready battery charge profiles using measured system load data (\textbf{157 mW baseline}) for reliable cold-weather embedded operation.}
+\resumeItemListEnd
+
+
+\resumeSubheading
+  {National Research Council}{May 25' -- Aug 25'}
+  {Automation Engineer Intern}{}
+\resumeItemListStart
+  \resumeItem{Implemented hardware process control for DIW electrode fabrication using \textbf{Hyrel 30M}, \textbf{Repetrel}, and \textbf{PrusaSlicer}, tuning deposition parameters for repeatable electrochemical performance.}
+  \resumeItem{Built data-driven optimization pipelines using \textbf{Python/MATLAB} to process electrochemical test data and model microstructure–performance relationships.}
+  \resumeItem{Performed hardware validation using battery cyclers and potentiostat instrumentation, achieving \textbf{125 mAh/cm\textsuperscript{2}} LMNO half-cell performance with reduced electrolyte overhead.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeProjectListStart
+
+\resumeProjectHeading
+  {{\textbf{\textbf{UART Design}}} $|$ \emph{ASM, FSM design, VHDL, Digital Systems, RTL Design}}{}
+\resumeItemListStart
+  \resumeItem{Designed a fully functional UART transmitter and receiver using FSM/ASM control logic.}
+  \resumeItem{Implemented RTL-level digital systems in VHDL, following strict structural design constraints.}
+  \resumeItem{Integrated baud rate generation, shift registers, and control/status registers.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {uOttawa Supermileage -- Electrical Team}{}
+  {Embedded Systems \& Telemetry Engineer}{}
+\resumeItemListStart
+  \resumeItem{Designed and implemented a real-time telemetry system to collect, transmit, and visualize vehicle performance data (speed, RPM, battery voltage).}
+  \resumeItem{Integrated sensors and microcontrollers (Arduino, ESP32) with CAN bus communication for vehicle diagnostics and system monitoring.}
+  \resumeItem{Optimized power management and signal integrity across the electrical system to meet energy-efficiency competition constraints.}
+\resumeItemListEnd
+
+
+  \resumeProjectHeading
+{{\textbf{VR Simulation on Autonomous Systems}} $|$ \emph{ Unity, C\#, Oculus SDK, VR Development}}{}
+\resumeItemListStart
+  \resumeItem{Engineered a Unity-based VR simulation highlighting challenges with autonomous systems.}
+  \resumeItem{Integrated Oculus Quest, real-time audio synchronization, NPC behavior, and user feedback loops for enhanced realism and engagement.}
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+{{\textbf{Smart Home \& Garden Automation}} $|$ \emph{Arduino, C++, IoT, Sensors, Embedded Systems}}{}
+\resumeItemListStart
+  \resumeItem{Developed an Arduino-based system with integrated sensors (humidity, motion, rain, light) and actuators.}
+  \resumeItem{Programmed in C++ using DHT11 libraries and optimized power management with Arduino WiFi.}
+\resumeItemListEnd
+
+
+\resumeProjectListEnd
+
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+        \textbf{Languages:} C++, Python, VHDL, Verilog, C, C\# \\
+        \textbf{Developer Tools:} Arduino IDE, Repetrel, PrusaSlicer, GitHub, Bench Power Instrumentation (PSU, Oscilloscope, Power Profiling) \\
+        \textbf{Hardware/Embedded Platforms:} Arduino, Embedded Sensor Systems, Energy Harvesting Systems, Battery Management Systems (BMS), Solar MPPT Power Systems, DIW Manufacturing Systems (Hyrel 30M) \\
+    }}
+\end{itemize}
+%-------------------------------------------
+\end{document}
